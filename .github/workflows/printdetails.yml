@@ -16,7 +16,7 @@ jobs:
         run: ls -a 
 
       - name: show runner details
-        run: echo "The name of the GitHub actions runner is {{ runner.name }} and OS is {{ runner.os }} "
+        run: echo "The name of the GitHub actions runner is ${{ runner.name }} and OS is ${{ runner.os }} "
 
       - name: print my github username
         run: echo "my github username is ${{ github.actor }}"
