@@ -1,0 +1,22 @@
+name: Print runner details and list directory files and username
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  runner_details:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: Show repository files
+        run: ls -a 
+
+      - name: show runner details
+        run: echo "The name of the GitHub actions runner is {{ runner.name }} and OS is {{ runner.os }} "
+
+      - name: print my github username
+        run: echo "my github username is ${{ github.actor }}"

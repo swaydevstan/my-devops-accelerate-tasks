@@ -6,8 +6,8 @@
 name: Mark stale issues and pull requests, and close
 
 on:
-  schedule:
-  - cron: '*/5 * * * *'
+  # schedule:
+  # - cron: '*/5 * * * *'
 
   workflow_dispatch:
 
